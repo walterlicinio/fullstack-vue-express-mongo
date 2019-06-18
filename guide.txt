@@ -1,0 +1,2 @@
+npm i express cors body-parser mongodb
+npm i nodemon -D
