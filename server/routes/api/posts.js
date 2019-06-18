@@ -18,7 +18,7 @@ router.post('/', async (req, res) => {
     //insertOne method from mongodb
     await posts.insertOne({
         text: req.body.text,
-        created_at: new Date()
+        createdAt: new Date()
     })
 
     res.status(201).json({
@@ -29,7 +29,7 @@ router.post('/', async (req, res) => {
 /// Delete Posts
 router.delete('/:id', async (req, res) => {
     const posts = await loadPostsCollection()
-    //deleteOne method from mongodb
+    //deleteOne method from mongo
     await posts.deleteOne({
         _id: new mongodb.ObjectID(req.params.id) //id is a specific type of object in mongo
     })
@@ -39,6 +39,7 @@ router.delete('/:id', async (req, res) => {
     })
 })
 
+//
 // DB Connect (MongoDB Atlas to create cluster, databases, etc)
 async function loadPostsCollection() {
     //creates the database connection with MongoClient.connect
