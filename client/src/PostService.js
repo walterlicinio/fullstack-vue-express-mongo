@@ -6,7 +6,7 @@
 import axios from 'axios'
 
 //API URL
-const url = 'http://localhost:3000/api/posts'
+const url = 'api/posts'
 
 //Create the Service
 class PostService {

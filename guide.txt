@@ -8,3 +8,4 @@ cd client
     npm run serve
     npm i axios
 
+npm run build //on client side
